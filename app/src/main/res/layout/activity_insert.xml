@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tong.billmanagement.InsertActivity">
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="年份"
+        android:gravity="center"
+        android:background="@drawable/textview"/>
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_year"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/textview"
+        android:text="月份" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_month"
+        android:layout_marginTop="10dp"
+        android:text="日期"
+        android:gravity="center"
+        android:background="@drawable/textview"/>
+
+    <TextView
+        android:id="@+id/tv_coast"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_day"
+        android:layout_marginTop="10dp"
+        android:text="消费金额(元)"
+        android:gravity="center"
+        android:background="@drawable/textview"/>
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_coast"
+        android:layout_marginTop="10dp"
+        android:text="消费类型"
+        android:gravity="center"
+        android:background="@drawable/textview"/>
+
+
+
+    <EditText
+        android:id="@+id/et_year"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tv_year"
+        android:layout_toRightOf="@+id/tv_year"
+        android:ems="10"
+        android:inputType="number"
+        android:hint=""
+        android:background="@drawable/edittext"/>
+
+    <EditText
+        android:id="@+id/et_month"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tv_month"
+        android:layout_toEndOf="@+id/tv_month"
+        android:layout_toRightOf="@+id/tv_month"
+        android:ems="10"
+        android:inputType="number"
+        android:hint=""
+        android:background="@drawable/edittext"/>
+
+    <EditText
+        android:id="@+id/et_day"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tv_day"
+        android:layout_toEndOf="@+id/tv_day"
+        android:layout_toRightOf="@+id/tv_day"
+        android:ems="10"
+        android:inputType="number"
+        android:hint=""
+        android:background="@drawable/edittext"/>
+
+    <EditText
+        android:id="@+id/et_coast"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tv_coast"
+        android:layout_toEndOf="@+id/tv_coast"
+        android:layout_toRightOf="@+id/tv_coast"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:hint=""
+        android:background="@drawable/edittext"/>
+
+    <Spinner
+        android:id="@+id/spin_type"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tv_type"
+        android:layout_toEndOf="@+id/tv_type"
+        android:layout_toRightOf="@+id/tv_type"
+        android:background="@drawable/edittext"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btn_insert"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/spin_type"
+        android:layout_marginTop="10dp"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edittext"
+        android:hint="请在这里输入该笔消费的详细信息"
+        android:gravity="top"/>
+
+    <View
+        android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <Button
+        android:id="@+id/btn_go_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_content"
+        android:layout_alignRight="@+id/strut"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button"
+        android:text="返回查询主界面" />
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/strut"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/button"
+        android:text="插入" />
+
+
+</RelativeLayout>

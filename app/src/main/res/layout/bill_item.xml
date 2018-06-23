@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_coast"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimaryDark"
+        android:text="id:" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvId"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/strut"
+        android:layout_toRightOf="@+id/tv_id"
+        android:background="@color/colorPrimaryDark"
+        android:text="日期:" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvDate"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvCoast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="消费金额(元):" />
+
+    <TextView
+        android:id="@+id/tv_coast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvCoast"
+        android:layout_below="@+id/tv_date"
+        android:layout_alignRight="@+id/strut"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_date"
+        android:layout_toEndOf="@+id/strut"
+        android:layout_toRightOf="@+id/strut"
+        android:background="@color/colorPrimaryDark"
+        android:text="消费类型:" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_coast"
+        android:layout_alignBottom="@+id/tv_coast"
+        android:layout_toEndOf="@+id/tvType"
+        android:layout_toRightOf="@+id/tvType"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="TextView" />
+
+    <View
+        android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
+
+
+
+    <ScrollView
+        android:id="@+id/sv_centent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_coast"
+
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAllCaps="false"
+            />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/strut"
+        android:layout_below="@+id/sv_centent"
+        android:background="#7fffff00"
+        android:text="修改" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btn_update"
+        android:layout_toRightOf="@+id/btn_update"
+        android:layout_alignLeft="@+id/strut"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/sv_centent"
+        android:background="#7fff0000"
+        android:text="删除" />
+
+
+
+
+</RelativeLayout>
